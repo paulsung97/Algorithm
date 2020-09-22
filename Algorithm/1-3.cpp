@@ -38,15 +38,15 @@ int main() {
 		{"이수진", 168, 0.4},
 		{"김영준", 174, 1.2},
 		{"박용규", 169, 0.8},
-
 	};
 	int nx = sizeof(x) / sizeof(x[0]);
 	int vdist[VMAX];
 	puts("ㅁㅁㅁ 신체검사표 ㅁㅁㅁ");
-	puts("    이름     키  시력 ");
+	puts("    이름       키        시력 ");
 	puts("--------------------------");
 	for (i = 0; i < nx; i++)
-		printf("%-18.18s%4d%5.lf cm\n", ave_height(x, nx));
+		printf("%-18.18s%4d%5.1f\n",x[i].name, x[i].height, x[i].vision);
+	printf("\n 평균키 : %5.1f cm\n", ave_height(x, nx));
 	dist_vision(x, nx, vdist);
 	printf("\n 시력분포\n");
 	for (i = 0; i < VMAX; i++)
