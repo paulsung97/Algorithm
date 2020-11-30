@@ -1,7 +1,5 @@
-/* ¹®ÀÚ¿­ ±æÀÌ¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥ */
 #include <stdio.h>
 
-/*--- ¹®ÀÚ¿­ sÀÇ ±æÀÌ¸¦ ±¸ÇÏ´Â ÇÔ¼ö(¹öÀü 1) ---*/
 int str_len(const char* s)
 {
 	int len = 0;
@@ -16,10 +14,10 @@ int main(void)
 {
 	char str[256];
 
-	printf("¹®ÀÚ¿­ : ");
-	scanf("%s", str);
+	printf("ë¬¸ìì—´ : ");
+	scanf_s("%s", str);
 
-	printf("ÀÌ ¹®ÀÚ¿­ÀÇ ±æÀÌ´Â %dÀÔ´Ï´Ù.\n", str_len(str));
+	printf("ì´ ë¬¸ìì—´ì˜ ê¸¸ì´ëŠ” %dì…ë‹ˆë‹¤.\n", str_len(str));
 
 	return 0;
 }
