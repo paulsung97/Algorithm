@@ -1,11 +1,10 @@
-/* ¹®ÀÚ¿­ Ãâ·Â(Æ÷ÀÎÅÍ »ç¿ë) */
 #include <stdio.h>
 
 int main(void)
 {
 	const char* pt = "12345";
 
-	printf("Æ÷ÀÎÅÍ pt´Â \"%s\"¸¦(À») °¡¸®Åµ´Ï´Ù.\n", pt);
+	printf("í¬ì¸í„° ptëŠ” \"%s\"ë¥¼(ì„) ê°€ë¦¬í‚µë‹ˆë‹¤.\n", pt);
 
 	return 0;
 }
