@@ -1,37 +1,35 @@
-/* ¹®ÀÚ¿­¿¡¼­ ¹®ÀÚ °Ë»öÇÏ´Â ÇÁ·Î±×·¥ */
 #include <stdio.h>
 
-/*--- ¹®ÀÚ¿­ s¿¡¼­ ¹®ÀÚ c¸¦ °Ë»öÇÏ´Â ÇÔ¼ö ---*/
 int str_chr(const char* s, int c)
 {
 	int i = 0;
 	c = (char)c;
 	while (s[i] != c) {
-		if (s[i] == '\0')		/* °Ë»ö ½ÇÆĞ */
+		if (s[i] == '\0')		
 			return -1;
 		i++;
 	}
-	return i;			/* °Ë»ö ¼º°ø */
+	return i;			
 }
 
 int main(void)
 {
-	char str[64];	/* ÀÌ ¹®ÀÚ¿­¿¡¼­ °Ë»ö*/
+	char str[64];	
 	char tmp[64];
-	int ch;			/* °Ë»öÇÒ ¹®ÀÚ */
+	int ch;			
 	int idx;
 
-	printf("¹®ÀÚ¿­ : ");
-	scanf("%s", str);
+	printf("ë¬¸ìì—´ : ");
+	scanf_s("%s", str);
 
-	printf("°Ë»öÇÒ ¹®ÀÚ : ");
-	scanf("%s", tmp);		/* ¸ÕÀú ¹®ÀÚ¿­·Î °Ë»öÇÒ ¹®ÀÚ¸¦ ÀĞ¾î µéÀÔ´Ï´Ù. */
-	ch = tmp[0];			/* Ã¹ ¹øÂ° ¹®ÀÚ¸¦ °Ë»öÇÒ ¹®ÀÚ·Î ÁöÁ¤ÇÕ´Ï´Ù. */
+	printf("ê²€ìƒ‰í•  ë¬¸ì : ");
+	scanf_s("%s", tmp);		
+	ch = tmp[0];			
 
-	if ((idx = str_chr(str, ch)) == -1)		/* Ã³À½ ³ª¿À´Â ¹®ÀÚ¸¦ °Ë»öÇÕ´Ï´Ù. */
-		printf("¹®ÀÚ '%c'´Â ¹®ÀÚ¿­¿¡ ¾ø½À´Ï´Ù.\n", ch);
+	if ((idx = str_chr(str, ch)) == -1)		
+		printf("ë¬¸ì '%c'ëŠ” ë¬¸ìì—´ì— ì—†ìŠµë‹ˆë‹¤.\n", ch);
 	else
-		printf("¹®ÀÚ '%c'´Â(Àº) %d ¹øÂ°¿¡ ÀÖ½À´Ï´Ù.\n", ch, idx + 1);
+		printf("ë¬¸ì '%c'ëŠ”(ì€) %d ë²ˆì§¸ì— ìˆìŠµë‹ˆë‹¤.\n", ch, idx + 1);
 
 	return 0;
 }
