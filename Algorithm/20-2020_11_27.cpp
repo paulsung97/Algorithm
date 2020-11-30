@@ -4,12 +4,12 @@
 int main(void)
 {
 	char st[128];
-	puts("\"STRING\"ÀÇ Ã³À½ 3°³ÀÇ ¹®ÀÚ¿Í ºñ±³ÇÕ´Ï´Ù.");
-	puts("\"XXXX\"¸¦ ÀÔ·ÂÇÏ¸é ¸¶Ä¨´Ï´Ù.");
+	puts("\"STRING\"ì˜ ì²˜ìŒ 3ê°œì˜ ë¬¸ìì™€ ë¹„êµí•©ë‹ˆë‹¤.");
+	puts("\"XXXX\"ë¥¼ ì…ë ¥í•˜ë©´ ë§ˆì¹©ë‹ˆë‹¤.");
 
 	while (1) {
-		printf("¹®ÀÚ¿­ st : ");
-		scanf("%s", st);
+		printf("ë¬¸ìì—´ st : ");
+		scanf_s("%s", st);
 
 		if (strncmp("XXXX", st, 3) == 0)
 			break;
