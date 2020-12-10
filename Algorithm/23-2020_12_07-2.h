@@ -7,8 +7,8 @@ typedef struct {
 	char name[20]; 		      
 } Member;
 
-#define MEMBER_NO 	1 	
-#define MEMBER_NAME 	2 	
+#define MEMBER_NO 		
+#define MEMBER_NAME 	 	
 
 
 int MemberNoCmp(const Member* x, const Member* y);
