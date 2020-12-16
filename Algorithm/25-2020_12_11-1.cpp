@@ -92,24 +92,24 @@ void Dump(const ClosedHash* h)
 		switch (h->table[i].stat) {
 		case Occupied: printf("%d(%s)\n",
 			h->table[i].data.no, h->table[i].data.name);	break;
-		case Empty: printf("-- ¹Ìµî·Ï --\n");				break;
-		case Deleted: printf("-- »èÁ¦ ¸¶Ä§ --\n");			break;
+		case Empty: printf("-- ë¯¸ë“±ë¡ --\n");				break;
+		case Deleted: printf("-- ì‚­ì œ ë§ˆì¹¨ --\n");			break;
 		}
 	}
 }
 
-/*--- ¸ğµç µ¥ÀÌÅÍ »èÁ¦ ---*/
+/*--- ëª¨ë“  ë°ì´í„° ì‚­ì œ ---*/
 void Clear(ClosedHash* h)
 {
 	int i;
-	for (i = 0; i < h->size; i++) /* ¸ğµç ¹öÅ¶À» */
-		h->table[i].stat = Empty; /* °ø¹éÀ¸·Î ¸¸µì´Ï´Ù. */
+	for (i = 0; i < h->size; i++) 
+		h->table[i].stat = Empty; 
 }
 
-/*--- ÇØ½Ã Å×ÀÌºí Á¾·á ---*/
+/*--- í•´ì‹œ í…Œì´ë¸” ì¢…ë£Œ ---*/
 void Terminate(ClosedHash* h)
 {
-	Clear(h);			/* ¸ğµç µ¥ÀÌÅÍ »èÁ¦ */
-	free(h->table);		/* ÇØ½Ã Å×ÀÌºí ¹è¿­ÀÇ ¸Ş¸ğ¸® ÇØÁ¦ */
-	h->size = 0;		/* ÇØ½Ã Å×ÀÌºí Å©±â¸¦ Å¬¸®¾î */
+	Clear(h);			
+	free(h->table);		
+	h->size = 0;		
 }
